@@ -24,7 +24,7 @@ class NewEventVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var datePickerDate: UIDatePicker!
     var selectedBrand = Brand()
     var brands = [Brand]()
-    var dateSelected = Date()
+    var dateSelected = String()
     var delegate : CanReceive?
     let db = Firestore.firestore()
     var UID = ""
@@ -48,8 +48,7 @@ class NewEventVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         let date = datePickerDate.date
         formatter.dateFormat = "dd/MM/yy"
         
-        dateSelected = datePickerDate.date
-        print(formatter.string(from: date))
+        dateSelected = formatter.string(from: date)
     }
     
     //MARK: - PICKERVIEW DELEGATE STUBS AND DATA SOURCE METHODS
@@ -93,12 +92,13 @@ class NewEventVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
                     }
             })
             db.collection("users").document(UID).setData(["events": FieldValue.arrayUnion([ref!])], merge: true)
+            
+            // LETTING THE MAIN EVENT VC KNOW THAT AN EVENT HAS BEEN ADDED AND IT NEEDS TO RELOAD THE EVENT ARRAY.
+            delegate?.updateEvents()
         } else {
             print("ERROR: UID cannot be identified because the user cannot be found when saving event.")
         }
         
-        // LETTING THE MAIN EVENT VC KNOW THAT AN EVENT HAS BEEN ADDED AND IT NEEDS TO RELOAD THE EVENT ARRAY.
-        delegate?.updateEvents()
         navigationController?.popToRootViewController(animated: true)
     }
     

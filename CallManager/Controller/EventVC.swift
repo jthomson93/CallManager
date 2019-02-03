@@ -38,7 +38,7 @@ class EventVC: UITableViewController, CanReceive, SendList {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventCell
-        cell.brandIconImage.image = UIImage(named: events[indexPath.row].brand.brandIcon)
+        cell.brandIconImage.image = UIImage(named: events[indexPath.row].icon)
         cell.cityName.text = events[indexPath.row].city
         cell.eventManagerName.text = events[indexPath.row].eventManagerName
         
@@ -74,18 +74,29 @@ class EventVC: UITableViewController, CanReceive, SendList {
     }
     
     func updateEvents() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yy"
+        events.removeAll()
+        
         db.collection("events").getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("ERROR: Could not get the documents from events collection: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    let EID = document.documentID
+                    let brand: String = document.data()["brandName"]! as! String
+                    let icon: String = document.data()["brandIcon"]! as! String
+                    let eventDate: Date = formatter.date(from: document.data()["dateOfEvent"]! as! String)!
+                    let city: String = document.data()["eventCity"]! as! String
+                    let manager: String = document.data()["eventManagerName"]! as! String
+                    let newEvent = Event(eventid: EID, eventBrandName: brand, eventBrandIcon: icon, dateofEvent: eventDate, eventCity: city, emName: manager)
+                    self.events.append(newEvent)
+                    self.tableView.reloadData()
                 }
             }
         }
         
         print("The data is recieved")
-        tableView.reloadData()
     }
     
     func listRecieved(list: [TodoItem]) {
