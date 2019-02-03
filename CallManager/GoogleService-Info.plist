@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>101075677761-6igt90scl9hv6f1dcbd81rg49ub1ru8m.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.101075677761-6igt90scl9hv6f1dcbd81rg49ub1ru8m</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB4ECL0-FqlichcywBTEaFiaXQJW4jS3qc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>101075677761</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jamiethomson.CallManager</string>
+	<key>PROJECT_ID</key>
+	<string>callmanager-f3ae2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>callmanager-f3ae2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:101075677761:ios:9d7dc14cc091d93a</string>
+	<key>DATABASE_URL</key>
+	<string>https://callmanager-f3ae2.firebaseio.com</string>
+</dict>
+</plist>

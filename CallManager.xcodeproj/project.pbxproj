@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7585D60B22576E76687D5B90 /* Pods_CallManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8072EB83B1E2DC6F49D78680 /* Pods_CallManager.framework */; };
+		7D0266FA22072F9000265848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D0266F922072F9000265848 /* GoogleService-Info.plist */; };
+		7D08D83A21F91FE6004BCC4D /* NewCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83921F91FE6004BCC4D /* NewCallVC.swift */; };
+		7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83B21F9200C004BCC4D /* NewEventVC.swift */; };
+		7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83D21F921D8004BCC4D /* Brand.swift */; };
+		7D08D84021F922E3004BCC4D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83F21F922E3004BCC4D /* Event.swift */; };
+		7D3FA31921FB915000EBB887 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA31821FB915000EBB887 /* TodoItem.swift */; };
 		7D42DCBE21EE9B820020AD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */; };
 		7D42DCC021EE9B820020AD24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42DCBF21EE9B820020AD24 /* ViewController.swift */; };
 		7D42DCC321EE9B820020AD24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D42DCC121EE9B820020AD24 /* Main.storyboard */; };
 		7D42DCC621EE9B820020AD24 /* CallManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D42DCC421EE9B820020AD24 /* CallManager.xcdatamodeld */; };
 		7D42DCC821EE9B830020AD24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D42DCC721EE9B830020AD24 /* Assets.xcassets */; };
 		7D42DCCB21EE9B830020AD24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D42DCC921EE9B830020AD24 /* LaunchScreen.storyboard */; };
+		7D85CA4921F10C010046BDBC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D85CA4721F10C010046BDBC /* EventCell.swift */; };
+		7D85CA4A21F10C010046BDBC /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D85CA4821F10C010046BDBC /* EventCell.xib */; };
+		7D85CA4F21F10ED50046BDBC /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D85CA4E21F10ED50046BDBC /* EventVC.swift */; };
+		7D85CA5221F1249F0046BDBC /* CallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D85CA5021F1249E0046BDBC /* CallCell.swift */; };
+		7D85CA5321F1249F0046BDBC /* CallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D85CA5121F1249E0046BDBC /* CallCell.xib */; };
+		7D85CA5521F126470046BDBC /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D85CA5421F126470046BDBC /* CallVC.swift */; };
+		7DB022EB2200EB03009C3284 /* RegisterAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB022EA2200EB03009C3284 /* RegisterAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0266F922072F9000265848 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D08D83921F91FE6004BCC4D /* NewCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCallVC.swift; path = CallManager/Controller/NewCallVC.swift; sourceTree = SOURCE_ROOT; };
+		7D08D83B21F9200C004BCC4D /* NewEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewEventVC.swift; path = CallManager/Controller/NewEventVC.swift; sourceTree = SOURCE_ROOT; };
+		7D08D83D21F921D8004BCC4D /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		7D08D83F21F922E3004BCC4D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7D3FA31821FB915000EBB887 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		7D42DCBA21EE9B820020AD24 /* CallManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D42DCBF21EE9B820020AD24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +44,16 @@
 		7D42DCC721EE9B830020AD24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D42DCCA21EE9B830020AD24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D42DCCC21EE9B830020AD24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D85CA4721F10C010046BDBC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		7D85CA4821F10C010046BDBC /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		7D85CA4E21F10ED50046BDBC /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		7D85CA5021F1249E0046BDBC /* CallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCell.swift; sourceTree = "<group>"; };
+		7D85CA5121F1249E0046BDBC /* CallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCell.xib; sourceTree = "<group>"; };
+		7D85CA5421F126470046BDBC /* CallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
+		7DB022EA2200EB03009C3284 /* RegisterAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAccountVC.swift; sourceTree = "<group>"; };
+		8072EB83B1E2DC6F49D78680 /* Pods_CallManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26BDFE992B660054B53EB7B /* Pods-CallManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallManager/Pods-CallManager.debug.xcconfig"; sourceTree = "<group>"; };
+		DC0A45A740A43B8F1CB500D8 /* Pods-CallManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-CallManager/Pods-CallManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7585D60B22576E76687D5B90 /* Pods_CallManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1082DBB4234FD6F19607A9C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8072EB83B1E2DC6F49D78680 /* Pods_CallManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BF73818DEC7435FE5C576A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C26BDFE992B660054B53EB7B /* Pods-CallManager.debug.xcconfig */,
+				DC0A45A740A43B8F1CB500D8 /* Pods-CallManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D42DCB121EE9B820020AD24 = {
 			isa = PBXGroup;
 			children = (
 				7D42DCBC21EE9B820020AD24 /* CallManager */,
 				7D42DCBB21EE9B820020AD24 /* Products */,
+				1BF73818DEC7435FE5C576A7 /* Pods */,
+				1082DBB4234FD6F19607A9C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +106,52 @@
 		7D42DCBC21EE9B820020AD24 /* CallManager */ = {
 			isa = PBXGroup;
 			children = (
-				7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */,
-				7D42DCBF21EE9B820020AD24 /* ViewController.swift */,
-				7D42DCC121EE9B820020AD24 /* Main.storyboard */,
+				7D85CA4B21F10C0B0046BDBC /* Model */,
+				7D85CA4C21F10C120046BDBC /* View */,
+				7D85CA4D21F10C150046BDBC /* Controller */,
 				7D42DCC721EE9B830020AD24 /* Assets.xcassets */,
 				7D42DCC921EE9B830020AD24 /* LaunchScreen.storyboard */,
 				7D42DCCC21EE9B830020AD24 /* Info.plist */,
+				7D0266F922072F9000265848 /* GoogleService-Info.plist */,
 				7D42DCC421EE9B820020AD24 /* CallManager.xcdatamodeld */,
 			);
 			path = CallManager;
+			sourceTree = "<group>";
+		};
+		7D85CA4B21F10C0B0046BDBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D08D83D21F921D8004BCC4D /* Brand.swift */,
+				7D08D83F21F922E3004BCC4D /* Event.swift */,
+				7D3FA31821FB915000EBB887 /* TodoItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D85CA4C21F10C120046BDBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D85CA4721F10C010046BDBC /* EventCell.swift */,
+				7D85CA4821F10C010046BDBC /* EventCell.xib */,
+				7D42DCC121EE9B820020AD24 /* Main.storyboard */,
+				7D85CA5021F1249E0046BDBC /* CallCell.swift */,
+				7D85CA5121F1249E0046BDBC /* CallCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D85CA4D21F10C150046BDBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7D08D83B21F9200C004BCC4D /* NewEventVC.swift */,
+				7D08D83921F91FE6004BCC4D /* NewCallVC.swift */,
+				7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */,
+				7D42DCBF21EE9B820020AD24 /* ViewController.swift */,
+				7D85CA4E21F10ED50046BDBC /* EventVC.swift */,
+				7D85CA5421F126470046BDBC /* CallVC.swift */,
+				7DB022EA2200EB03009C3284 /* RegisterAccountVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D42DCCF21EE9B830020AD24 /* Build configuration list for PBXNativeTarget "CallManager" */;
 			buildPhases = (
+				F3871B2D8D1030690377987B /* [CP] Check Pods Manifest.lock */,
 				7D42DCB621EE9B820020AD24 /* Sources */,
 				7D42DCB721EE9B820020AD24 /* Frameworks */,
 				7D42DCB821EE9B820020AD24 /* Resources */,
+				6F8B53CC6DDD6EAF2492C881 /* [CP] Embed Pods Frameworks */,
+				6D84093D0E52EBD229C0F1A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,21 +215,121 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D85CA4A21F10C010046BDBC /* EventCell.xib in Resources */,
+				7D0266FA22072F9000265848 /* GoogleService-Info.plist in Resources */,
 				7D42DCCB21EE9B830020AD24 /* LaunchScreen.storyboard in Resources */,
 				7D42DCC821EE9B830020AD24 /* Assets.xcassets in Resources */,
 				7D42DCC321EE9B820020AD24 /* Main.storyboard in Resources */,
+				7D85CA5321F1249F0046BDBC /* CallCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D84093D0E52EBD229C0F1A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CallManager/Pods-CallManager-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallManager/Pods-CallManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F8B53CC6DDD6EAF2492C881 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CallManager/Pods-CallManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallManager/Pods-CallManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3871B2D8D1030690377987B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CallManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D42DCB621EE9B820020AD24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D85CA4921F10C010046BDBC /* EventCell.swift in Sources */,
+				7D08D84021F922E3004BCC4D /* Event.swift in Sources */,
+				7D08D83A21F91FE6004BCC4D /* NewCallVC.swift in Sources */,
+				7D3FA31921FB915000EBB887 /* TodoItem.swift in Sources */,
+				7D85CA5521F126470046BDBC /* CallVC.swift in Sources */,
+				7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */,
+				7D85CA5221F1249F0046BDBC /* CallCell.swift in Sources */,
+				7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */,
 				7D42DCC021EE9B820020AD24 /* ViewController.swift in Sources */,
+				7D85CA4F21F10ED50046BDBC /* EventVC.swift in Sources */,
 				7D42DCC621EE9B820020AD24 /* CallManager.xcdatamodeld in Sources */,
+				7DB022EB2200EB03009C3284 /* RegisterAccountVC.swift in Sources */,
 				7D42DCBE21EE9B820020AD24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +474,7 @@
 		};
 		7D42DCD021EE9B830020AD24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26BDFE992B660054B53EB7B /* Pods-CallManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +493,7 @@
 		};
 		7D42DCD121EE9B830020AD24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0A45A740A43B8F1CB500D8 /* Pods-CallManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
