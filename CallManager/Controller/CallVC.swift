@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol SendList {
-    func listRecieved(list: [TodoItem])
-}
-
 class CallVC: UITableViewController {
 
     @IBOutlet var callTableView: UITableView!
-    var todoListItems = [TodoItem]()
-    var delegate: SendList?
+    var eventID = String()
+    var calls:[Call] = [Call]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,39 +30,27 @@ class CallVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return todoListItems.count
+        return calls.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCallCell", for: indexPath)
-        cell.textLabel?.text = todoListItems[indexPath.row].listItem
-
+        
         return cell
     }
 
-    @IBAction func addTodoItem(_ sender: Any) {
-        var textField = UITextField()
-        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+    @IBAction func addNewCall(_ sender: Any) {
+        performSegue(withIdentifier: "goToNewCallVC", sender: self)
         
-        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            
-            var newItem = TodoItem()
-            
-            newItem.listItem = textField.text!
-            newItem.isComplete = false // REQUIRED BECASUE IT IS REQUIRED IN COREDATA
-            self.todoListItems.append(newItem)
-            self.delegate?.listRecieved(list: self.todoListItems)
-            
-            DispatchQueue.main.async { self.tableView.reloadData() }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNewCallVC" {
+            let newCallVC = segue.destination as! NewCallVC
+            print(eventID)
+            newCallVC.callEventID = eventID
         }
-        
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Create new item"
-            textField = alertTextField
-            
-        }
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
     }
 
+    
 }

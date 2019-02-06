@@ -9,14 +9,13 @@
 import UIKit
 import Firebase
 
-class EventVC: UITableViewController, CanReceive, SendList {
+class EventVC: UITableViewController, CanReceive {
 
     
 
     @IBOutlet var eventTableView: UITableView!
     var events = [Event]()
-    var passValue = [TodoItem]()
-    var passEvent: Event?
+    var passEventID = String()
     let db = Firestore.firestore()
     
 
@@ -51,8 +50,7 @@ class EventVC: UITableViewController, CanReceive, SendList {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        passValue = events[indexPath.row].todolist
-        passEvent = events[indexPath.row]
+        passEventID = events[indexPath.row].EID
         performSegue(withIdentifier: "goToCallView", sender: self)
     }
     
@@ -64,11 +62,10 @@ class EventVC: UITableViewController, CanReceive, SendList {
         
         if segue.identifier == "goToCallView" {
             let newCall = segue.destination as! CallVC
-            newCall.delegate = self
-            newCall.todoListItems = passValue
-
+            newCall.eventID = passEventID
         }
     }
+    
     @IBAction func newEventBtnPressed(_ sender: Any) {
        performSegue(withIdentifier: "goToNewEvent", sender: self)
     }
@@ -99,10 +96,6 @@ class EventVC: UITableViewController, CanReceive, SendList {
         print("The data is recieved")
     }
     
-    func listRecieved(list: [TodoItem]) {
-        passEvent!.todolist = list
-        print("Got the list")
-    }
     
     @IBAction func signOutPressed(_ sender: Any) {
         print("Sign Out Button Pressed")

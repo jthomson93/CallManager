@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7585D60B22576E76687D5B90 /* Pods_CallManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8072EB83B1E2DC6F49D78680 /* Pods_CallManager.framework */; };
 		7D0266FA22072F9000265848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D0266F922072F9000265848 /* GoogleService-Info.plist */; };
+		7D0266FC2207861A00265848 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0266FB2207861A00265848 /* Call.swift */; };
 		7D08D83A21F91FE6004BCC4D /* NewCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83921F91FE6004BCC4D /* NewCallVC.swift */; };
 		7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83B21F9200C004BCC4D /* NewEventVC.swift */; };
 		7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83D21F921D8004BCC4D /* Brand.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		7D0266F922072F9000265848 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D0266FB2207861A00265848 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		7D08D83921F91FE6004BCC4D /* NewCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewCallVC.swift; path = CallManager/Controller/NewCallVC.swift; sourceTree = SOURCE_ROOT; };
 		7D08D83B21F9200C004BCC4D /* NewEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewEventVC.swift; path = CallManager/Controller/NewEventVC.swift; sourceTree = SOURCE_ROOT; };
 		7D08D83D21F921D8004BCC4D /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				7D08D83D21F921D8004BCC4D /* Brand.swift */,
 				7D08D83F21F922E3004BCC4D /* Event.swift */,
 				7D3FA31821FB915000EBB887 /* TodoItem.swift */,
+				7D0266FB2207861A00265848 /* Call.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				7D08D83A21F91FE6004BCC4D /* NewCallVC.swift in Sources */,
 				7D3FA31921FB915000EBB887 /* TodoItem.swift in Sources */,
 				7D85CA5521F126470046BDBC /* CallVC.swift in Sources */,
+				7D0266FC2207861A00265848 /* Call.swift in Sources */,
 				7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */,
 				7D85CA5221F1249F0046BDBC /* CallCell.swift in Sources */,
 				7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */,
