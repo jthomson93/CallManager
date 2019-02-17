@@ -38,7 +38,7 @@ class NewEventVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         db.settings = settings
         
         setUpBrands()
-        
+        brandImage.image = UIImage(named: brands[0].brandIcon)
         brandPicker.delegate = self
         brandPicker.dataSource = self
     }

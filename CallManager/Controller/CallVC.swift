@@ -92,7 +92,8 @@ class CallVC: UITableViewController, ReloadTable {
                 print("ERROR: Could not remove the document: ", err)
             } else {
                 print("The document has been deleted!")
-                
+                self.calls.remove(at: indexPath.row)
+                DispatchQueue.main.async { tableView.reloadData() }
                 self.loadCalls()
             }
         }
