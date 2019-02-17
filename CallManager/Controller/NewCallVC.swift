@@ -9,11 +9,20 @@
 import UIKit
 import Firebase
 
+protocol ReloadTable {
+    func reloadTableAfterNewCall()
+}
+
 class NewCallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var callEventID = String()
     let db = Firestore.firestore()
     var todoItems = [TodoItem]()
+    var callCount = Int()
+    var callDate = String()
+    let formatter = DateFormatter()
+    let date = Date()
+    var delegate: ReloadTable?
     @IBOutlet weak var eventManagerNameLabel: UILabel!
     @IBOutlet weak var currentCallDateLbl: UILabel!
     @IBOutlet weak var previousTicketCount: UILabel!
@@ -22,6 +31,7 @@ class NewCallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tablewView: UITableView!
     @IBOutlet weak var currentTickets: UITextField!
     @IBOutlet weak var currentAttendance: UITextField!
+    @IBOutlet weak var callDateLabel: UILabel!
     
     
     
@@ -33,6 +43,11 @@ class NewCallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getEventInfo(eventID: callEventID)
         prepareOrLoadNotes()
         prepareCall()
+        prepareTodoList()
+        
+        formatter.dateFormat = "dd/MM/yy"
+        callDate = formatter.string(from: date)
+        callDateLabel.text = callDate
         print(callEventID)
     }
     
@@ -63,6 +78,26 @@ class NewCallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func prepareTodoList() {
+        db.collection("events/\(callEventID)/todoList").getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("ERROR: Could not get the todo list items - ", err)
+            } else {
+                for documents in querySnapshot!.documents {
+                    var newTodoItem = TodoItem()
+                    if let todoItemDescription = documents.data()["itemTitle"] {
+                        newTodoItem.listItem = todoItemDescription as! String
+                    }
+                    if let todoItemComplete = documents.data()["isComplete"] {
+                        newTodoItem.isComplete = todoItemComplete as! Bool
+                    }
+                    self.todoItems.append(newTodoItem)
+                    DispatchQueue.main.async { self.tablewView.reloadData() }
+                }
+            }
+        }
+    }
+    
     func prepareCall() {
         let docRef = db.collection("events").document(callEventID)
         
@@ -89,25 +124,58 @@ class NewCallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //TODO: - Implement the todo list global to each call in the event
     
+    @IBAction func newTodoItemPressed(_ sender: Any) {
+        print("TO DO BUTTON HIT!")
+        var itemTextField = UITextField()
+        let itemPopUpAlert = UIAlertController(title: "Add New Todo Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            print("ACTION OCCURED")
+            var newItem = TodoItem()
+            newItem.isComplete = false
+            newItem.listItem = itemTextField.text!
+            self.todoItems.append(newItem)
+            self.db.collection("events/\(self.callEventID)/todoList").document().setData(["itemTitle": newItem.listItem, "isComplete": newItem.isComplete])
+            DispatchQueue.main.async { self.tablewView.reloadData() }
+        }
+        
+        itemPopUpAlert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new task"
+            itemTextField = alertTextField
+        }
+        itemPopUpAlert.addAction(action)
+        present(itemPopUpAlert, animated: true, completion: nil)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return todoItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "custom")
-        cell?.textLabel!.text = "Test"
+        cell?.textLabel!.text = todoItems[indexPath.row].listItem
         return cell!
     }
     
     @IBAction func saveEvent(_ sender: Any) {
+        
         db.collection("events").document(callEventID).setData(["currentTicketCount": currentTickets.text!,
                                                                "currentAttendance": currentAttendance.text!,
                                                                "EventNotes": eventNotes.text], merge: true)
+        
+        db.collection("events/\(callEventID)/calls").document().setData(["callCount": callCount,
+                                                                         "callDate": callDate,
+                                                                         "currentTicketCount": currentTickets.text!,
+                                                                         "currentAttendance": currentAttendance.text!,
+                                                                         "EventNotesSnapshot": eventNotes.text])
+        delegate?.reloadTableAfterNewCall()
         navigationController?.popViewController(animated: true)
     }
+    
+    
     
 }

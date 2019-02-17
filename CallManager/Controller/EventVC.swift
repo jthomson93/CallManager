@@ -10,15 +10,15 @@ import UIKit
 import Firebase
 
 class EventVC: UITableViewController, CanReceive {
-
     
-
+    
+    
     @IBOutlet var eventTableView: UITableView!
     var events = [Event]()
     var passEventID = String()
     let db = Firestore.firestore()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let settings = db.settings
@@ -30,6 +30,8 @@ class EventVC: UITableViewController, CanReceive {
         configureTableView()
         updateEvents()
     }
+    
+    //MARK: - Configure the table view controller
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
@@ -66,8 +68,43 @@ class EventVC: UITableViewController, CanReceive {
         }
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Delete Event", message: "Are you sure you want to delete the event? Type 'DELETE' to confirm.", preferredStyle: .alert)
+        let failedAlert = UIAlertController(title: "Failed To Delete", message: "Could not delete the event because the entry did not match the required word.", preferredStyle: .alert)
+        var textField = UITextField()
+        
+        let action = UIAlertAction(title: "Delete", style: .default) { (action) in
+            
+            if textField.text == "DELETE" {
+                self.db.collection("events").document(self.events[indexPath.row].EID).delete(completion: { (err) in
+                    if let err = err {
+                        print("ERROR: - Occured while attempting to remove event", err)
+                    }
+                })
+                self.events.remove(at: indexPath.row)
+                DispatchQueue.main.async { tableView.reloadData() }
+                self.updateEvents()
+            } else {
+                self.present(failedAlert, animated: true, completion: nil)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+                    failedAlert.dismiss(animated: true, completion: nil)
+                })
+            }
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Type 'DELETE' here"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: - Handle new events and saving data
+    
     @IBAction func newEventBtnPressed(_ sender: Any) {
-       performSegue(withIdentifier: "goToNewEvent", sender: self)
+        performSegue(withIdentifier: "goToNewEvent", sender: self)
     }
     
     func updateEvents() {
@@ -110,5 +147,5 @@ class EventVC: UITableViewController, CanReceive {
         }
     }
     
-
+    
 }

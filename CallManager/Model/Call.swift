@@ -9,6 +9,10 @@
 import Foundation
 
 struct Call {
+    var documentID: String
     var callNumber: Int
-    var callDate: Date
+    var callDate: String
+    var callNotesSnapshot: String
+    var ticketCount: String
+    var attendCount: String
 }

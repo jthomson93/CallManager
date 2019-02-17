@@ -9,7 +9,9 @@
 import UIKit
 
 class CallCell: UITableViewCell {
-
+    @IBOutlet weak var callNumberLabel: UILabel!
+    @IBOutlet weak var callDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -14,6 +14,7 @@
 		7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83B21F9200C004BCC4D /* NewEventVC.swift */; };
 		7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83D21F921D8004BCC4D /* Brand.swift */; };
 		7D08D84021F922E3004BCC4D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08D83F21F922E3004BCC4D /* Event.swift */; };
+		7D33341E2219C40000875203 /* PreviousCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D33341D2219C40000875203 /* PreviousCallVC.swift */; };
 		7D3FA31921FB915000EBB887 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA31821FB915000EBB887 /* TodoItem.swift */; };
 		7D42DCBE21EE9B820020AD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */; };
 		7D42DCC021EE9B820020AD24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42DCBF21EE9B820020AD24 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		7D08D83B21F9200C004BCC4D /* NewEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewEventVC.swift; path = CallManager/Controller/NewEventVC.swift; sourceTree = SOURCE_ROOT; };
 		7D08D83D21F921D8004BCC4D /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		7D08D83F21F922E3004BCC4D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7D33341D2219C40000875203 /* PreviousCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousCallVC.swift; sourceTree = "<group>"; };
 		7D3FA31821FB915000EBB887 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		7D42DCBA21EE9B820020AD24 /* CallManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D42DCBD21EE9B820020AD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				7D85CA4E21F10ED50046BDBC /* EventVC.swift */,
 				7D85CA5421F126470046BDBC /* CallVC.swift */,
 				7DB022EA2200EB03009C3284 /* RegisterAccountVC.swift */,
+				7D33341D2219C40000875203 /* PreviousCallVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				7D85CA5521F126470046BDBC /* CallVC.swift in Sources */,
 				7D0266FC2207861A00265848 /* Call.swift in Sources */,
 				7D08D83E21F921D8004BCC4D /* Brand.swift in Sources */,
+				7D33341E2219C40000875203 /* PreviousCallVC.swift in Sources */,
 				7D85CA5221F1249F0046BDBC /* CallCell.swift in Sources */,
 				7D08D83C21F9200C004BCC4D /* NewEventVC.swift in Sources */,
 				7D42DCC021EE9B820020AD24 /* ViewController.swift in Sources */,
